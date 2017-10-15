@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: Spring-boot-app
+
+server:
+  port: 9000
+
+message: hello
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.99.100:32768/eureka/
+
+---
+spring:
+  profiles:
+    active: stage
+
+server:
+  port: 8005
+
+message: Hey from stage!!!
+
+---
+spring:
+  profiles:
+    active: prod
+
+server:
+  port: 8006
+
+message: Hey from prod!!!
+
+---
+
+
